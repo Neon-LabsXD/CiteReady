@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "title": "CiteReady — Is your website ready to be cited by AI?",
+    "description": "Free AI visibility checker: score your site 0–100 for readiness to be found and cited by ChatGPT, Claude, Perplexity and Google AI Overviews."
+  },
+  "nav": {
+    "methodology": "Methodology",
+    "how": "How it works",
+    "lang": "Language"
+  },
+  "badge": {
+    "text": "Powered by FreeSerp API & LLM Scanner"
+  },
+  "hero": {
+    "title": "Is your website ready to be cited by AI?",
+    "subtitle": "Enter a domain and get an AI-readiness score from 0 to 100 with a concrete checklist of fixes.",
+    "label": "Website domain",
+    "placeholder": "example.com",
+    "button": "Check",
+    "try": "Try:"
+  },
+  "sample": {
+    "heading": "A sample report",
+    "sub": "This is a demo. Run a real check above.",
+    "pill": "Sample report",
+    "index": "AI Visibility Index",
+    "grade": "Grade B — good, with a few gaps to close.",
+    "dr": "FreeSerp DR",
+    "schema": "Schema.org Indexing",
+    "citation": "LLM Citation Score",
+    "c1": "AI crawlers are allowed in robots.txt",
+    "c2": "Open Graph tags are present",
+    "c3": "llms.txt file is missing",
+    "c4": "Valid JSON-LD structured data found"
+  },
+  "features": {
+    "heading": "Why CiteReady"
+  },
+  "feat1": {
+    "title": "FreeSerp Integration",
+    "desc": "Instant domain and competitor analysis from a 20M+ site index."
+  },
+  "feat2": {
+    "title": "LLM Crawlability",
+    "desc": "Checks access for ChatGPT, Claude and Perplexity crawlers."
+  },
+  "feat3": {
+    "title": "Actionable Roadmap",
+    "desc": "Ready-to-apply fixes for your code and page structure."
+  },
+  "footer": {
+    "data": "Data: our own checks + FreeSerp API",
+    "methodology": "Methodology"
+  },
+  "loading": {
+    "step1": "Loading robots.txt…",
+    "step2": "Analysing the homepage…",
+    "step3": "Querying FreeSerp…",
+    "step4": "Scoring the results…"
+  },
+  "status": {
+    "pass": "Passed",
+    "warn": "Needs work",
+    "fail": "Missing",
+    "na": "No data"
+  },
+  "cat": {
+    "A": "AI crawler access",
+    "B": "Files for AI & search",
+    "C": "Structured data",
+    "D": "Content & meta tags",
+    "E": "Index presence (FreeSerp)"
+  },
+  "verdict": {
+    "A": "Well prepared to be found and cited by AI.",
+    "B": "Good, with a few gaps to close.",
+    "C": "A fair start, but several things hold AI back.",
+    "D": "Significant gaps — AI will struggle with this site.",
+    "F": "Not ready — AI can barely read or cite this site."
+  },
+  "res": {
+    "score": "Score",
+    "grade": "Grade",
+    "checkedAt": "Checked",
+    "cached": "cached",
+    "categories": "Category scores",
+    "aiView": "How AI sees your site",
+    "aiViewEmpty": "This site isn't in the FreeSerp index yet, so there's no AI-generated description. That's common for new or smaller sites and doesn't lower your score.",
+    "niche": "Niche",
+    "stack": "Stack",
+    "dr": "Domain Rating",
+    "bots": "AI crawlers",
+    "recommendations": "Recommendations",
+    "noRecommendations": "No issues found — every check passed. Nicely done.",
+    "details": "All checks in detail",
+    "competitors": "Competitors in your niche",
+    "copy": "Copy link",
+    "copied": "Copied!",
+    "another": "Check another site",
+    "print": "Print / PDF"
+  },
+  "bots": {
+    "bot": "Bot",
+    "owner": "Owner",
+    "status": "Status",
+    "allowed": "Allowed",
+    "blocked": "Blocked"
+  },
+  "error": {
+    "invalid_domain": "That doesn't look like a valid domain. Try something like example.com.",
+    "unreachable": "We couldn't reach that site. Check the domain is spelled correctly and is online.",
+    "rate_limited": "Too many checks from your network. Please wait a few minutes and try again.",
+    "internal": "Something went wrong on our side. Please try again in a moment.",
+    "network": "Network error — please check your connection and try again."
+  },
+  "checks": {
+    "A1": {
+      "name": "robots.txt is reachable",
+      "why": "Crawlers look for robots.txt first; a server error here can block all of them at once.",
+      "fix": "Serve a robots.txt at your root that returns HTTP 200, even a minimal one."
+    },
+    "A2": {
+      "name": "AI crawlers are allowed",
+      "why": "If AI crawlers are disallowed, assistants simply can't read or cite your pages.",
+      "fix": "Remove blanket Disallow rules for AI agents, or add explicit allow groups for the bots you want.",
+      "code": "User-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /"
+    },
+    "A3": {
+      "name": "Homepage responds over HTTPS",
+      "why": "AI crawlers expect a working, secure homepage returning HTTP 200 over HTTPS.",
+      "fix": "Make sure the homepage loads over https:// and returns 200, with http redirecting to https."
+    },
+    "B1": {
+      "name": "llms.txt file",
+      "why": "llms.txt is an emerging standard that tells AI models what your site is about and what to read.",
+      "fix": "Add a plain-text /llms.txt describing your site and linking its key pages.",
+      "code": "# Your Company\n> One-line description of what you do.\n\n## Key pages\n- https://example.com/: Homepage\n- https://example.com/about: About us\n- https://example.com/docs: Documentation"
+    },
+    "B2": {
+      "name": "sitemap.xml",
+      "why": "A sitemap helps crawlers discover all your pages instead of only the ones they stumble upon.",
+      "fix": "Publish a valid /sitemap.xml and reference it from robots.txt with a Sitemap: line."
+    },
+    "C1": {
+      "name": "JSON-LD structured data",
+      "why": "Structured data lets AI understand the entities on your page with far less guessing.",
+      "fix": "Add a <script type=\"application/ld+json\"> block with schema.org data to your pages."
+    },
+    "C2": {
+      "name": "Useful schema types",
+      "why": "Types like Organization, Product or FAQPage map directly to what assistants answer.",
+      "fix": "Use schema.org types that fit your content: Organization, WebSite, Product, Article or FAQPage."
+    },
+    "C3": {
+      "name": "Open Graph tags",
+      "why": "Open Graph gives a clean title, description and image when your page is shared or previewed.",
+      "fix": "Add og:title, og:description and (ideally) og:image meta tags in the head."
+    },
+    "D1": {
+      "name": "Title tag",
+      "why": "The title is often the headline an assistant shows and reasons about.",
+      "fix": "Write a descriptive <title> of roughly 30–65 characters."
+    },
+    "D2": {
+      "name": "Meta description",
+      "why": "A good description is a ready-made summary for AI answers and search snippets.",
+      "fix": "Add a meta description of roughly 70–160 characters."
+    },
+    "D3": {
+      "name": "Single H1",
+      "why": "One clear H1 tells crawlers the main topic of the page.",
+      "fix": "Use exactly one <h1> as the page's main heading."
+    },
+    "D4": {
+      "name": "Language & canonical",
+      "why": "lang helps AI answer in the right language; canonical avoids duplicate-content confusion.",
+      "fix": "Set <html lang=\"…\"> and a <link rel=\"canonical\"> on your pages."
+    },
+    "D5": {
+      "name": "Homepage text volume",
+      "why": "If the homepage renders mostly via JavaScript, crawlers may see an almost empty page.",
+      "fix": "Make sure meaningful text (300+ words) is in the served HTML, not only after JavaScript runs."
+    },
+    "D6": {
+      "name": "Question-answer format",
+      "why": "Q&A headings and FAQ blocks match how people actually ask assistants questions.",
+      "fix": "Add question-style headings or an FAQ section, ideally marked up with FAQPage schema."
+    },
+    "E1": {
+      "name": "Listed in the site index",
+      "why": "Being indexed means AI data sources already know your site exists.",
+      "fix": "Keep the site reachable and crawlable so indexes can pick it up over time."
+    },
+    "E2": {
+      "name": "AI-generated description",
+      "why": "This shows how AI currently summarises your site — your de-facto pitch to the models.",
+      "fix": "Sharpen your on-page copy so the AI summary reflects what you actually offer."
+    },
+    "E3": {
+      "name": "Domain Rating",
+      "why": "Higher authority makes assistants more likely to trust and cite your pages.",
+      "fix": "Earn quality backlinks and publish authoritative, original content over time."
+    },
+    "E4": {
+      "name": "Pages in the global index",
+      "why": "More indexed pages means more surface area for AI to find and cite.",
+      "fix": "Publish and interlink more crawlable pages, and submit your sitemap."
+    }
+  },
+  "faq": {
+    "heading": "Frequently asked questions",
+    "q1": "What is GEO (Generative Engine Optimization)?",
+    "a1": "It's optimizing your site so AI assistants and AI search can find, understand and cite it. Think of it as the AI-era counterpart to SEO.",
+    "q2": "What is llms.txt?",
+    "a2": "An emerging plain-text file at your site root that tells AI models what your site is about and which pages matter — like robots.txt, but for describing content to LLMs.",
+    "q3": "Should I block AI crawlers?",
+    "a3": "Usually not. Blocking them means assistants can't read or cite you. Block specific bots only when you have a clear reason, such as protecting paid content.",
+    "q4": "Does a high score guarantee my site will be cited?",
+    "a4": "No. The score measures technical readiness. Whether you get cited also depends on content quality, authority and relevance. It's a guide, not a guarantee.",
+    "q5": "What data does CiteReady use?",
+    "a5": "Our own live checks of your robots.txt, llms.txt, sitemap and homepage HTML, plus the free FreeSerp API for index presence and competitors."
+  },
+  "method": {
+    "title": "Methodology",
+    "intro": "CiteReady scores how ready a website is to be found, understood and cited by AI assistants and AI search. The score runs from 0 to 100 across five categories. Here is exactly what we check and how it adds up.",
+    "sourcesH": "Data sources",
+    "source1": "Our own live checks: we fetch your robots.txt, llms.txt, sitemap.xml and homepage HTML directly from the server and analyse them.",
+    "source2": "The free FreeSerp API: index presence, AI-generated description, Domain Rating and competitors in your niche.",
+    "scoringH": "How scoring works",
+    "scoring": "Each check is Passed (full weight), Needs work (half), Missing (zero) or No data. A No-data check is excluded and its category is rescaled across the remaining checks, so missing third-party data never lowers your score.",
+    "grades": "Grades: A 85–100 · B 70–84 · C 50–69 · D 30–49 · F below 30.",
+    "checksH": "What we check",
+    "cat": "Category",
+    "check": "Check",
+    "weight": "Weight",
+    "why": "Why it matters",
+    "disclaimerH": "A note on the score",
+    "disclaimer": "This score is a diagnostic guide, not a guarantee. A high score improves your odds of being read and cited by AI, but actual citation also depends on content quality, authority and relevance, which no automated check can fully measure.",
+    "back": "Back to the checker",
+    "pts": "pts",
+    "metaTitle": "Methodology — CiteReady",
+    "metaDesc": "How CiteReady scores AI-readiness: every check, its weight, the data sources and what the score does and doesn't guarantee."
+  }
+}

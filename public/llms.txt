@@ -1,0 +1,16 @@
+# CiteReady
+
+> CiteReady is a free AI visibility checker. Enter a domain and get a 0–100 score for how ready a website is to be found, understood and cited by AI assistants and AI search (ChatGPT, Claude, Perplexity, Google AI Overviews), with a concrete checklist of fixes.
+
+CiteReady runs its own live checks of a site's robots.txt, llms.txt, sitemap.xml and homepage HTML, and uses the free FreeSerp API for index presence, AI-generated description, Domain Rating and competitors. It is a diagnostic guide for Generative Engine Optimization (GEO), not a guarantee of citation.
+
+## Key pages
+- https://ws-109.ws.semalt.dev/: Homepage and the AI-readiness checker
+- https://ws-109.ws.semalt.dev/methodology.php: Full methodology — every check, its weight, data sources and scoring
+
+## What it checks
+- AI crawler access: robots.txt reachability, whether AI bots are allowed, HTTPS homepage
+- Files for AI and search: llms.txt, sitemap.xml
+- Structured data: JSON-LD presence, useful schema.org types, Open Graph
+- Content and meta tags: title, meta description, single H1, language and canonical, text volume, question-answer format
+- Index presence (FreeSerp): listing, AI-generated description, Domain Rating, pages in the global index

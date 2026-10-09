@@ -1,0 +1,10 @@
+# Runtime (кеш і rate-limit живуть на сервері поза репозиторієм)
+storage/
+*.tmp
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
