@@ -5,7 +5,7 @@
 **Жива версія:** https://ws-109.ws.semalt.dev
 **Методологія:** https://ws-109.ws.semalt.dev/methodology.php
 
-Тестове завдання на вакансію Junior AI Web Developer (Semalt). Детальний план — у [PLAN.md](PLAN.md), лог роботи з AI — у [WORKLOG.md](WORKLOG.md).
+Детальний план — у [PLAN.md](PLAN.md), лог роботи з AI — у [WORKLOG.md](WORKLOG.md).
 
 ---
 
